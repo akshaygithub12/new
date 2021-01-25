@@ -1,0 +1,41 @@
+<h1>add passanger</h1>
+<form action="{% url 'book' flights.id %}" method="post">
+{%csrf_token %}
+<select name="passanger">
+{%for passenger in non_passengers %}
+<option value="{{passenger.id>{{passengers}} </option>
+{% endfor %}
+</select>
+
+<input type="submit">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from .models import Flights,Passenger
+# Create your views here.
+def index(request):
+    return render(request, "flights/index.html", {
+        "Flights": Flights.objects.all()
+    })
+
+
+def flight(request, flights_id):
+    flight = Flights.objects.get(pk=flights_id)
+    passengers = flight.passengers.all()
+    return render(request, "flights/flight.html", {
+        "flight": flight,
+        "passengers": passengers
+    })

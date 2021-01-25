@@ -1,0 +1,14 @@
+<html>
+<head>
+</head>
+<title>Flights</title>
+<body>
+<h1>Flight details:</h1>
+<ul>
+{% for Flights in Flights %}
+<h2><li><a href="{% url 'flight' Flights.id %}">Flight {{ Flights.id }}
+source:{{Flights.origin}} and arriving {{Flights.destination}} this Flight is doing {{Flights.duration}}</a></li></h2>
+{%endfor%}
+</ul>
+</body>
+</html>

@@ -1,0 +1,5 @@
+mongodb+srv://m220student:<password>@mflix.nksrf.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+m220student
+
+password:m220student
