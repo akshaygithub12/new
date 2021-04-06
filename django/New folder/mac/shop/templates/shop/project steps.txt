@@ -1,0 +1,7 @@
+''''this code only for slides 
+   # products= Product.objects.all()
+    #n= len(products)
+    #nSlides= n//4+ceil((n/4)+(n//4))
+    #params={'no_of_slides':nSlides, 'range':range(1,nSlides), 'product': products}
+   # allprods=[[products,range(1,len(products)), nSlides],[products,range(1,len(products)), nSlides]]
+   # params={'allprods':allprods}'''

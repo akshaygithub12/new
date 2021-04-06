@@ -1,0 +1,3 @@
+{% extends 'shop/basic.html' %}
+
+<title>{% block title %}Block the item {% endblock %}</title>	
